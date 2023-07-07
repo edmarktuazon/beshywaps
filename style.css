@@ -1,0 +1,68 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
+
+* {
+	font-family: "Signika Negative", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.container .title {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.container .title h1 {
+	color: #c4127a;
+	font-size: 50px;
+	font-style: italic;
+}
+
+.container .title .icon {
+	font-size: 32px;
+}
+
+.container .title .icon {
+	animation-name: spin;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.container input {
+	width: 80%;
+	height: 50px;
+	border: 2px solid #c4127a;
+	border-radius: 5px;
+	padding: 0 15px;
+	font-size: 18px;
+	outline: none;
+}
+.container button {
+	height: 50px;
+	background-color: #c4127a;
+	border: none;
+	border-radius: 5px;
+	padding: 0 15px;
+	font-size: 18px;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+}
