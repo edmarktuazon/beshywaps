@@ -4,7 +4,7 @@ const inputFields = document.querySelector("#inputFields");
 const copyButton = document.querySelector("#copyButton");
 
 const fieldFunction = (e) => {
-	if (e.key === " ") {
+	if (e.code === "Space") {
 		inputFields.value += " 🤸";
 	}
 };
