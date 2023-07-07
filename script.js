@@ -4,7 +4,12 @@ const inputFields = document.querySelector("#inputFields");
 const copyButton = document.querySelector("#copyButton");
 
 const fieldFunction = (e) => {
-	if (e.code === "Space" || e.code === "KEYCODE_SPACE = 62") {
+	var keyCode = event.keyCode || event.which; // Key code for older browsers
+	var keyValue = String.fromCharCode(keyCode); // Key value
+
+	if (keyCode === 32 || keyValue === " ") {
+		// The space bar was pressed
+		console.log("Space bar was pressed");
 		inputFields.value += "🤸 ";
 	}
 };
@@ -15,4 +20,4 @@ const buttonFunc = () => {
 };
 
 copyButton.addEventListener("click", buttonFunc);
-inputFields.addEventListener("keyup", fieldFunction);
+inputFields.addEventListener("keydown", fieldFunction);
