@@ -4,15 +4,14 @@ const inputFields = document.querySelector("#inputFields");
 const copyButton = document.querySelector("#copyButton");
 
 const fieldFunction = (e) => {
-	if (e.keyCode === 32) {
-		inputFields.value += "🤸 ";
+	if (e.key === " ") {
+		inputFields.value += " 🤸";
 	}
 };
-
-const buttonFunc = () => {
+const buttonFunction = () => {
 	inputFields.select();
 	document.execCommand("copy");
 };
 
-copyButton.addEventListener("click", buttonFunc);
-inputFields.addEventListener("keyup", fieldFunction);
+copyButton.addEventListener("click", buttonFunction);
+inputFields.addEventListener("keydown", fieldFunction);
