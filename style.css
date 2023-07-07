@@ -33,7 +33,7 @@
 
 .container .title .icon {
 	animation-name: spin;
-	animation-duration: 2s;
+	animation-duration: 5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
@@ -41,8 +41,11 @@
 	from {
 		transform: rotate(0deg);
 	}
-	to {
+	30% {
 		transform: rotate(360deg);
+	}
+	80% {
+		transform: rotate(0deg);
 	}
 }
 

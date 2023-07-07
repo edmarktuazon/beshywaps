@@ -4,16 +4,15 @@ const inputFields = document.querySelector("#inputFields");
 const copyButton = document.querySelector("#copyButton");
 
 const fieldFunction = (e) => {
-	// Check if keyCode or key is equal to the space bar keycode
-	if (e.keyCode === 32 || e.key === " ") {
-		inputFields.value += " 🤸";
+	if (e.code === "Space" || e.code === "KEYCODE_SPACE = 62") {
+		inputFields.value += "🤸 ";
 	}
 };
 
-const buttonFunction = () => {
+const buttonFunc = () => {
 	inputFields.select();
 	document.execCommand("copy");
 };
 
-copyButton.addEventListener("click", buttonFunction);
-inputFields.addEventListener("keydown", fieldFunction);
+copyButton.addEventListener("click", buttonFunc);
+inputFields.addEventListener("keyup", fieldFunction);
